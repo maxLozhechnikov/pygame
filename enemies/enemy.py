@@ -23,7 +23,7 @@ class Enemy:
         self.imgs = []
         self.flipped = False
         self.max_health = 0
-        self.speed_increase = 1.2
+        self.test_speed_increase = 2
 
     def draw(self, win):
         """
@@ -182,9 +182,9 @@ class Enemy:
 
         x2 = x2 + 75
 
-        dirn = ((x2 - x1) * 2, (y2 - y1) * 2)
-        length = math.sqrt((dirn[0]) ** 2 + (dirn[1]) ** 2)
-        dirn = (dirn[0] / length * self.speed_increase, dirn[1] / length * self.speed_increase)
+
+        dirn = ((x2 - x1), (y2 - y1))
+
 
         if dirn[0] < 0 and not (self.flipped):
             self.flipped = True
