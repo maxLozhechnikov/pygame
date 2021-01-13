@@ -7,6 +7,7 @@ from enemies.sword import Sword
 from towers.archerTower import ArcherTowerLong, ArcherTowerShort
 from towers.supportTower import DamageTower, RangeTower
 from menu.menu import VerticalMenu, PlayPauseButton
+from gen import *
 import time
 import random
 pygame.font.init()
@@ -41,9 +42,9 @@ pygame.mixer.music.load(os.path.join("game_assets", "123.mp3"))
 # frequency of enemies
 # (# scorpions, # wizards, # clubs, # swords)
 waves = [
-    [20, 0, 0],
-    [50, 0, 0],
-    [100, 0, 0],
+    genal(),
+    genal(),
+    genal(),
     [0, 20, 0],
     [0, 50, 0, 1],
     [0, 100, 0],
@@ -102,6 +103,7 @@ class Game:
         generate the next enemy or enemies to show
         :return: enemy
         """
+
         if sum(self.current_wave) == 0:
             if len(self.enemys) == 0:
                 self.wave += 1
