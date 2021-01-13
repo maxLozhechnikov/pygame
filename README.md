@@ -12,3 +12,7 @@ WHAT I USED
 
 HOW TO RUN
 To run just use run.py using pycharm.
+
+WHAT WE USED
+
+For understanding GA we address to smart-blog.net/the-coding-of-genetic-algorithm-from-scratch/ (our teacher`s website)
